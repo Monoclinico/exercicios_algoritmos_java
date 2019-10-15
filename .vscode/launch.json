@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Exercicio_214",
+      "request": "launch",
+      "mainClass": "exercicio_214.Exercicio_214"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Exercicio_212",
+      "request": "launch",
+      "mainClass": "exercicio_212.Exercicio_212"
+    }
+  ]
+}
