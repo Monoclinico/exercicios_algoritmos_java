@@ -1,10 +1,11 @@
 package exercicio_151;
+import java.text.DecimalFormat;
 import java.util.Scanner;
+
 public class Exercicio_151 {
     public static void main(String[] args) {
         //Calcula o Indice de Massa Corporal (IMC)
-        Scanner teclado = new Scanner(System.in);
-        double peso = 0.0, altura=0.0;
+        double peso = 0.0, altura=0.0, imc=0.0;
         char continuar = 'S';
         boolean encerrar = false;
         do {
@@ -12,9 +13,11 @@ public class Exercicio_151 {
             System.out.println("Calcula o IMC e retorna a faixa de risco");
             System.out.println("Deseja fazer o teste[S/N]?");
             try{
+                Scanner teclado = new Scanner(System.in);
+                DecimalFormat arredondar = new DecimalFormat("#0.00");
                 continuar = teclado.next().trim().toUpperCase().charAt(0);
-                encerrar = continuar == 'N';
-                if (encerrar){
+                encerrar = continuar == 'S';
+                if (!encerrar){
                     System.out.println("Programa encerrado");
                     break;
                 }
@@ -22,13 +25,13 @@ public class Exercicio_151 {
                 peso = teclado.nextDouble();
                 System.out.print("Informe a sua altura(m): ");
                 altura = teclado.nextDouble();        
+                imc = IMC(peso,altura);
+                System.out.println("O IMC e: "+ arredondar.format(imc)); //imc com 2 casas decimais
+                System.out.println("Representa: "+ faixaRisco(imc));
             }catch(Exception e) {
                 System.out.println("Resposta invalida");
-                continue;
             }
-            System.out.println("Seu IMC e: "+ IMC(peso,altura));
-            System.out.println("Seu IMC e: "+ faixaRisco(IMC(peso,altura)));
-        }while(!encerrar);
+        }while(encerrar);
     }
     public static double IMC(double peso, double altura){
         if ((peso>0.0)&&(altura>0.0)){
