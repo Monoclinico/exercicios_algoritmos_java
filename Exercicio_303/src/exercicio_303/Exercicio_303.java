@@ -8,7 +8,7 @@ public class Exercicio_303 {
         double valor_multa, valor_multa_total, valor_total;
         
         //inicio do programa
-        System.out.println("Gerenciador de arrecadacao multas do DETRAN. ");
+        System.out.println("Gerenciador de arrecadacao de multas do DETRAN. ");
         valor_total = 0.0;
         maiores_multas = 0;
         cnh_maiores_multas = 0;
