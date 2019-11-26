@@ -23,13 +23,13 @@ public class Exercicio_301 {
         alunos = 0;
         acima_de_200=0;
         pessoal_maior_familiar=0;
-        renda_pessoal = 1;
+        renda_pessoal = 1.0;
         //Inicio do programa
         System.out.println("=============================================");
         System.out.println("FAZ A GESTAO DE RENDA DE ALUNOS DE UMA "
                 + "FACULDADE.");
         //Entrada e saida de dados
-        while (renda_pessoal > 0){
+        while (renda_pessoal > 0.0){
             System.out.print("DESEJA CONTINUAR[S/N]?");
             try {
                 resposta = teclado.next().toUpperCase().charAt(0);
@@ -73,6 +73,7 @@ public class Exercicio_301 {
             } catch (Exception e) {
                 System.out.println("*** OPS! ALGO DEU ERRADO. ***");
                 System.out.println("ERRO: "+e.toString());
+                renda_pessoal = 1.0;
                 break;
             }
         }
