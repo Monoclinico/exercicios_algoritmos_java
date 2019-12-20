@@ -22,15 +22,17 @@ public class Exercicio_299 {
         double[] notas = new double[5];
         boolean aprovado; 
         String nome;
+        int numero_de_alunos = 0;
         int aprovadosMateria3 = 0;
-        final int NUMERO_DE_ALUNOS = 2;
         final int NUMERO_DE_NOTAS = 5;
         //==========Inicio==========================
         System.out.println("Informa o estado dos alunos de uma sala de acordo com suas notas.");
         //==========Entrada de dados================
-        for (int i=1;i<=NUMERO_DE_ALUNOS; i++){
+        System.out.println("Informe o numero de alunos da sala: ");
+        numero_de_alunos = teclado.nextInt();
+        for (int i=1;i<=numero_de_alunos; i++){
             aprovado = true;
-            System.out.println("Informe o nome do aluno: ");
+            System.out.println("Informe o nome do "+i+"º aluno: ");
             nome = teclado.next();
             for (int n=1;n<=NUMERO_DE_NOTAS;n++){
                 System.out.println("Informe a "+n+"º nota");
@@ -55,7 +57,7 @@ public class Exercicio_299 {
             }
         }
         System.out.println("A porcentagem dos alunos aprovados na materia 3: "
-                +((aprovadosMateria3/NUMERO_DE_ALUNOS)*100.0)+"%");
+                +((aprovadosMateria3/numero_de_alunos)*100.0)+"%");
     }
     
 }
